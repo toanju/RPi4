@@ -10,6 +10,9 @@ Raspberry Pi 4 UEFI Firmware Images
 This repository contains installable builds of the official
 [EDK2 Raspberry Pi 4 UEFI firmware](https://github.com/tianocore/edk2-platforms/tree/master/Platform/RaspberryPi/RPi4).
 
+Additionally, the builds in this repo are modified and remove the 3 GB RAM
+limit by default. See the Initial Notice section below.
+
 # Initial Notice
 
 __PLEASE READ THE FOLLOWING:__  

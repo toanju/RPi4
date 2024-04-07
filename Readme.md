@@ -13,6 +13,16 @@ This repository contains installable builds of the official
 Additionally, the builds in this repo are modified and remove the 3 GB RAM
 limit by default. See the Initial Notice section below.
 
+To update the firmware run:
+
+```sh
+UEFI_FW_VERSION=$(curl -s "https://api.github.com/repos/toanju/RPi4/releases/latest" | jq -r .tag_name)
+curl -sLO "https://github.com/toanju/RPi4/releases/download/${UEFI_FW_VERSION}/RPi4_UEFI_Firmware_${UEFI_FW_VERSION}.zip"
+sudo unzip RPi4_UEFI_Firmware_${UEFI_FW_VERSION}.zip -d /boot/
+rm RPi4_UEFI_Firmware_${UEFI_FW_VERSION}.zip
+sudo systemctl reboot
+```
+
 # Initial Notice
 
 __PLEASE READ THE FOLLOWING:__  
